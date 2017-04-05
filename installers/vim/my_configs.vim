@@ -1,6 +1,6 @@
 let NERDTreeShowHidden=1
 
-set clipboard=unnamedplus
+set clipboard=unnamed
 
 set number
 set expandtab
