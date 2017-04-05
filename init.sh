@@ -2,17 +2,24 @@
 
 source is_installed.sh --source-only
 
+forceFlag=${1:-"0"}
+
 function installer() {
   program=${1}
   installerFunc=${2}
   isInstalled=$(program_is_installed ${program}) 
 
+
   echo "checking for ${program}..."
 
-  if [ $isInstalled = "1" ] ; then
+  if [ $forceFlag = "--force" ] ; then
+    echo "installing ${program}..."
+    $installerFunc
+    echo "done!"
+  elif [ $isInstalled = "1" ] ; then
     echo "${program} $(echo_if $isInstalled)"
     echo "${program} installed, skipping..."
-  else
+  elif [ $isInstalled = "0" ] ; then
     echo "installing ${program}..."
     $installerFunc
     echo "done!"
@@ -55,8 +62,7 @@ function zshInstaller() {
   cp zsh/.zshrc ~/
 }
 function tmuxInstaller() {
-  brew install tmux 
-  brew install reattach-to-user-namespace
+  brew install tmux reattach-to-user-namespace
   cp installers/tmux/.tmux.conf ~/ 
   tmux source-file ~/.tmux.conf
 
