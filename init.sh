@@ -20,11 +20,12 @@ function installer() {
 }
 
 function homebrewInstaller() {
-  echo "124done!"
-  # /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 }
 function rubyInstaller() {
-  brew install ruby
+  brew update 
+  brew install ruby-build rbenv
+  rbenv init
 }
 function gitInstaller() {
   brew install git
@@ -47,7 +48,7 @@ function vimInstaller() {
   cp installers/vim/my_configs.vim ~/.vim_runtime/ 
 }
 function zshInstaller() {
-  brew install zsh zsh-completions
+  brew install zsh zsh-completions hub
 
   #install oh-my-zsh
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -72,7 +73,7 @@ function meteorInstaller() {
 }
 
 installer brew homebrewInstaller
-installer ruby rubyInstaller
+installer rbenv rubyInstaller
 installer git gitInstaller
 installer node nodeInstaller
 installer zsh zshInstaller
