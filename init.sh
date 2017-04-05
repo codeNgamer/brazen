@@ -1,24 +1,27 @@
-#!/bin/bash
+#!/bin/zsh
 
-source is_installed.sh
+source is_installed.sh --source-only
 
 function installer() {
   program=${1}
   installerFunc=${2}
-  isInstalled=$( program_is_installed  )
+  isInstalled=$(program_is_installed ${program}) 
 
-  if ! $isInstalled ; then
-    echo "checking for ${program}..."
-    echo "${program} $(echo_if $(program_is_installed brew))"
+  echo "checking for ${program}..."
+
+  if [ $isInstalled = "1" ] ; then
+    echo "${program} $(echo_if $isInstalled)"
     echo "${program} installed, skipping..."
   else
     echo "installing ${program}..."
     $installerFunc
+    echo "done!"
   fi
 }
 
 function homebrewInstaller() {
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  echo "124done!"
+  # /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 }
 function rubyInstaller() {
   brew install ruby
@@ -59,6 +62,14 @@ function tmuxInstaller() {
   #install tmuxinator
   gem install tmuxinator
 }
+function neo4jInstaller() {
+  brew install neo4j
+  echo 'installing npm neo4j..'
+  npm install -g neo4j
+}
+function meteorInstaller() {
+  curl https://install.meteor.com/ | sh
+}
 
 installer brew homebrewInstaller
 installer ruby rubyInstaller
@@ -67,3 +78,5 @@ installer node nodeInstaller
 installer zsh zshInstaller
 installer vim vimInstaller
 installer tmux tmuxInstaller
+installer neo4j neo4jInstaller 
+installer meteor meteorInstaller
