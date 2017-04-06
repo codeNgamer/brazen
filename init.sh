@@ -47,7 +47,7 @@ function nodeInstaller() {
   nodeDependencyInstaller
 }
 function vimInstaller() {
-  brew install vim 
+  brew install vim --with-lua
   echo "installing ultimate vimrc"
   git clone https://github.com/amix/vimrc.git ~/.vim_runtime
   sh ~/.vim_runtime/install_awesome_vimrc.sh
