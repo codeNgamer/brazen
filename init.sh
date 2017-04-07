@@ -53,6 +53,7 @@ function vimInstaller() {
   sh ~/.vim_runtime/install_awesome_vimrc.sh
   touch ~/.vim_runtime/my_configs.vim
   cp installers/vim/my_configs.vim ~/.vim_runtime/ 
+  vim +PluginInstall +qall
 }
 function zshInstaller() {
   brew install zsh zsh-completions hub

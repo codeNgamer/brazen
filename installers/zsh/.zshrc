@@ -51,12 +51,12 @@ ZSH_THEME="ys"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git autojump)
 
 # User configuration
-export PATH=$HOME:$HOME/bin:/usr/local/bin:$PATH:$HOME/scripts:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+export PATH=$HOME:$HOME/bin:/usr/local/bin:$PATH:$HOME/scripts:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$HOME/.fastlane/bin
 
-export PATH="$HOME/.fastlane/bin:$PATH"
+fpath=(/usr/local/share/zsh-completions $fpath)
 
  # export PATH=~/.npm-packages/bin:$PATH
  # export PATH=~/.npm-packages/lib/node_modules/eslint/bin:$PATH
