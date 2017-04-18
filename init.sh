@@ -79,6 +79,10 @@ function meteorInstaller() {
   curl https://install.meteor.com/ | sh
 }
 
+function mavenInstaller() {
+  brew install maven
+}
+
 installer brew homebrewInstaller
 installer rbenv rubyInstaller
 installer git gitInstaller
@@ -88,3 +92,4 @@ installer vim vimInstaller
 installer tmux tmuxInstaller
 installer neo4j neo4jInstaller 
 installer meteor meteorInstaller
+installer mvn mavenInstaller
