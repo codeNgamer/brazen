@@ -83,6 +83,10 @@ function mavenInstaller() {
   brew install maven
 }
 
+function yarnInstaller() {
+  brew install yarn 
+}
+
 installer brew homebrewInstaller
 installer rbenv rubyInstaller
 installer git gitInstaller
@@ -93,3 +97,4 @@ installer tmux tmuxInstaller
 installer neo4j neo4jInstaller 
 installer meteor meteorInstaller
 installer mvn mavenInstaller
+installer yarn yarnInstaller
