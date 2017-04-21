@@ -87,6 +87,10 @@ function yarnInstaller() {
   brew install yarn 
 }
 
+function mongoInstaller() {
+  brew install mongodb
+}
+
 installer brew homebrewInstaller
 installer rbenv rubyInstaller
 installer git gitInstaller
@@ -98,3 +102,4 @@ installer neo4j neo4jInstaller
 installer meteor meteorInstaller
 installer mvn mavenInstaller
 installer yarn yarnInstaller
+installer mongod mongoInstaller
