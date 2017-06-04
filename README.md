@@ -14,17 +14,17 @@ sh installer.sh
 
 Tools:
 
-homebrew
-ruby
-git
-node
-zsh
-vim (along with ultimate vimrc check out: https://github.com/amix/vimrc)
-tmux (with tmuxinator)
-neo4j 
-meteor
-maven
-yarn
-mongo
-iterm2
+* homebrew
+* ruby
+* git
+* *node
+* zsh
+* vim (along with ultimate vimrc check out: https://github.com/amix/vimrc)
+* tmux (with tmuxinator)
+* neo4j 
+* meteor
+* maven
+* yarn
+* mongo
+* iterm2
 
