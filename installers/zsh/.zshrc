@@ -107,3 +107,6 @@ alias hideDesktop="defaults write com.apple.finder CreateDesktop false; killall 
 alias showDesktop="defaults write com.apple.finder CreateDesktop true; killall Finder"
 
 alias disableGateKeeper='sudo spctl --master-disable'
+
+eval "$(rbenv init -)"
+
