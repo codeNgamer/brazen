@@ -51,7 +51,13 @@ ZSH_THEME="ys"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git autojump)
+plugins=(
+git
+autojump
+vi-mode
+)
+
+bindkey -M viins 'jj' vi-cmd-mode
 
 # User configuration
 export PATH=$HOME:$HOME/bin:/usr/local/bin:$PATH:$HOME/scripts:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$HOME/.fastlane/bin
@@ -99,7 +105,6 @@ alias cleanGitRepo="git branch --merged | grep -v "\*" | grep -v "master" | grep
 alias lintJs="eslint --ext '.js, .jsx' ."
 alias delete="rm -Rf"
 alias clearConsole="clear && printf '\e[3J'"
-alias endMeteor="kill -9 $(ps ax | grep node | grep meteor | awk '{print (}')"
 alias ipaddr="ifconfig | grep en0 -a5 | grep netmask"
 alias edit="vim"
 alias -g vimConfig="~/.vim_runtime/my_configs.vim"
