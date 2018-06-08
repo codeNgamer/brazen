@@ -2,7 +2,7 @@
 Setup Tooling
 
 ```
-curl -sL https://raw.githubusercontent.com/codeNgamer/brazen/master/installer.sh 
+curl -sL https://raw.githubusercontent.com/codeNgamer/brazen/master/installer.sh | sh 
 ```
 
 To re-run, cd $HOME/brazen-master
