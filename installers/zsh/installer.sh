@@ -1,4 +1,4 @@
-
+#!/usr/bin/env bash
 function zshInstaller() {
   brew install zsh zsh-completions hub
 
