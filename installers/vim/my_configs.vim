@@ -31,6 +31,8 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'nikvdp/ejs-syntax'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'jparise/vim-graphql'
+Plugin 'tpope/vim-obsession'
+Plugin 'editorconfig/editorconfig-vim'
 
 
 " All of your Plugins must be added before the following line
