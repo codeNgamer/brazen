@@ -9,7 +9,16 @@ import _ from 'lodash';
 class Installer {
   constructor(config) {
     super();
-
+    this.checkRequired(config, ['install', 'uninstall']);
+    this.config = config;
+  }
+  checkRequired(obj, keys) {
+    _.each(keys, key => {
+      if(!_.has(obj, key)) return this.requiredError(obj, key);
+    })
+  }
+  requiredError(obj, key) {
+    throw new Error(`${key} is required!`)
   }
 }
 
