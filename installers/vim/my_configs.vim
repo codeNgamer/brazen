@@ -12,31 +12,32 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'pangloss/vim-javascript'
-Bundle 'mxw/vim-jsx'
-Plugin 'Shougo/neocomplete'
-Plugin 'autoclose'
-Plugin 'Konfekt/FastFold'
-Plugin 'scrooloose/syntastic'
-Plugin 'Yggdroot/indentLine'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'nikvdp/ejs-syntax'
-Plugin 'edkolev/tmuxline.vim'
-Plugin 'jparise/vim-graphql'
-Plugin 'tpope/vim-obsession'
-Plugin 'editorconfig/editorconfig-vim'
+Plug 'VundleVim/Vundle.vim'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'Shougo/neocomplete'
+Plug 'autoclose'
+Plug 'Konfekt/FastFold'
+Plug 'Yggdroot/indentLine'
+Plug 'leafgarland/typescript-vim'
+Plug 'nikvdp/ejs-syntax'
+Plug 'edkolev/tmuxline.vim'
+Plug 'jparise/vim-graphql'
+Plug 'tpope/vim-obsession'
+Plug 'editorconfig/editorconfig-vim'
+" post install (yarn install | npm install)
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'sbdchd/neoformat'
 
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
+call plug#end()
 filetype plugin indent on    " required
 
 " let vim-jsx plugin handle .js files too

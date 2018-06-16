@@ -12,7 +12,7 @@ forceFlag=${1:-"0"}
 function installer() {
   program=${1}
   installerFunc=${2}
-  isInstalled=$(program_is_installed ${program}) 
+  isInstalled=$(program_is_installed ${program})
 
 
   echo "checking for ${program}..."
@@ -39,8 +39,7 @@ installer node nodeInstaller
 installer zsh zshInstaller
 installer vim vimInstaller
 installer tmux tmuxInstaller
-installer neo4j neo4jInstaller 
-installer meteor meteorInstaller
+installer neo4j neo4jInstaller
 installer mvn mavenInstaller
 installer yarn yarnInstaller
 installer mongod mongoInstaller

@@ -1,0 +1,31 @@
+{
+  "name": "brazen",
+  "version": "0.0.1",
+  "description": "Setup tooling",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codeNgamer/brazen.git"
+  },
+  "keywords": [
+    "tooling",
+    "brazen"
+  ],
+  "author": "codeNgamer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codeNgamer/brazen/issues"
+  },
+  "homepage": "https://github.com/codeNgamer/brazen#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2017": "^6.24.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.10"
+  }
+}
